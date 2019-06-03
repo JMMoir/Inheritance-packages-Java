@@ -9,6 +9,10 @@ public class Director extends Manager {
         this.budget = budget;
     }
 
+    public double getBudget(){
+        return budget;
+    }
+
 
 
 }
