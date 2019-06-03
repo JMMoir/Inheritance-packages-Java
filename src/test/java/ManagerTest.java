@@ -44,4 +44,10 @@ public class ManagerTest{
     public void canGetBonus() {
         assertEquals(340, manager.payBonus(),1);
     }
+
+    @Test
+    public void payriseCantBeNeg() {
+        manager.raiseSalary(-10);
+        assertEquals(34000, manager.getSalary(), 1);
+    }
 }
