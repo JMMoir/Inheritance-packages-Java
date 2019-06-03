@@ -3,6 +3,7 @@ import org.junit.Test;
 import staff.management.Manager;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotEquals;
 
 public class ManagerTest{
 
@@ -49,5 +50,12 @@ public class ManagerTest{
     public void payriseCantBeNeg() {
         manager.raiseSalary(-10);
         assertEquals(34000, manager.getSalary(), 1);
+    }
+
+    @Test
+    public void setNameNotNull() {
+        manager.setName(null);
+        assertEquals("John", manager.getName());
+        assertNotEquals(null, manager.getName());
     }
 }
